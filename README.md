@@ -16,21 +16,21 @@ d) Bonus points for source code in C/C++/C#. “
 # Solution: 
 As no tile information was provided, I made a general algorithm that can rum with whatever tiles provided. Loop for each word in the dictionary, and for each word, check the characters in the word if it is in the tiles provided. The only difference between q1 and q2 is if we treat blank tile as wildcard. Following is the pseudo-code. 
 ```
-For(word in dictionary)
+for(word in dictionary)
 {
-	If(word.size() < tiles.size())
+	if(word.size() < tiles.size())
 	{
-		For(character in word)
-{
-	For(tile in tilelist)
-	{
-		If(character == tile || tile == ‘ ‘)
+		for(character in word)
 		{
-			Record that tile
+			for(tile in tilelist)
+			{
+				if(character == tile || tile == ‘ ‘)
+				{
+					Record that tile;
+				}
+				if(didn’t found that tile) return false;
+			}
 		}
-If(didn’t found that tile) return false;
-}
-}
 	}
 }
 ```
