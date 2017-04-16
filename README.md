@@ -15,7 +15,7 @@ d) Bonus points for source code in C/C++/C#. “
 
 # Solution: 
 As no tile information was provided, I made a general algorithm that can rum with whatever tiles provided. Loop for each word in the dictionary, and for each word, check the characters in the word if it is in the tiles provided. The only difference between q1 and q2 is if we treat blank tile as wildcard. Following is the pseudo-code. 
-'''
+```
 For(word in dictionary)
 {
 	If(word.size() < tiles.size())
@@ -33,31 +33,31 @@ If(didn’t found that tile) return false;
 }
 	}
 }
-'''
+```
 The source code is written in C++. It is in the file “main.cpp”. You can compile and run it with the following command:
 ## Windows:
-'''
+```
 g++ main.cpp -o main.exe
-'''
+```
 And then run it by:
 ### without wildcard
-'''
+```
 main -wo “your tiles”
-'''
+```
 ### with wildcard
-'''
+```
 main -w “your tiles”
-'''
+```
 ## Linux:
-'''
+```
 g++ main.cpp -o main
-'''
+```
 And then run it by:
 ### without wildcard
-'''
+```
 ./main -wo “your tiles”
-'''
+```
 ### with wildcard
-'''
+```
 ./main -w “your tiles”
-'''
+```
